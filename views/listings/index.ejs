@@ -1,0 +1,76 @@
+<% layout("/layout/boilerplate.ejs")%>
+
+<body>
+  <div class="filters">
+    <div class="filter">
+      <i class="fa-solid fa-fire"></i>
+      Trending
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-bed"></i>
+      Rooms
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-mountain-city"></i>
+      Iconic Cities
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-mountain"></i>
+      Mountain
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-crown"></i>
+      Castels
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-person-swimming"></i>
+      Amazing Pools
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-campground"></i>
+      Camping
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-cow"></i>
+      Farms
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-snowflake"></i>
+      Arctic
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-sailboat"></i>
+      Boats
+    </div>
+    <div class="form-check form-switch form-check-reverse" id="check-box">
+      <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+      <label class="form-check-label" for="switchCheckReverse">Display Price after Tax</label>
+    </div>
+
+  </div>
+  <h3 class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">All Listings</h3>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <%for(let listing of allListings){%>
+    <a href="/listings/<%= listing._id %>" class="listings-link"
+      ><div class="card col card-listing">
+        <img
+          class="card-img-top"
+          src="<%=listing.image.url%>"
+          alt="Image"
+          style="height: 20rem"
+        />
+        <div class="card-img-overlay"></div>
+
+        <div class="card-body">
+          <p class="card-text">
+            <b><%=listing.title%></b>
+            <br />
+            <p>&#8377;<%=listing.price.toLocaleString("en-IN")%>/night</p>
+          </p>
+        </div>
+      </div>
+    </a>
+
+    <%}%>
+  </div>
+</body>
