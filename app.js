@@ -23,7 +23,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./modules/user.js");
 
-const Db_URL = process.env.Db_URL;
+const Db_URL = process.env.DB_URL;
 
 const store = MongoStore.create({
     mongoUrl: Db_URL,
