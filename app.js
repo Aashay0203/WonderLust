@@ -93,7 +93,7 @@ async function main() {
 
 
 app.get("/", (req, res) => {
-    res.send("page is working");
+    res.redirect("/listings");
 });
 
 app.use("/listings", listingRouter);
