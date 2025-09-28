@@ -165,25 +165,56 @@ footer {
 .filters :hover {
     opacity: 1;
     text-decoration: dashed;
+    cursor: pointer;
 }
 
-.form-switch {
-    min-height: 50px;
-    /* CRUCIAL: Creates vertical space for centering */
-    padding: 0 15px;
-    /* Adds space on the left and right */
-
-    /* --- Flexbox Centering --- */
+#check-box {
     display: flex;
     align-items: center;
-    /* Vertically centers content */
-    justify-content: center;
-    /* Horizontally centers content as a group */
-    gap: 10px;
-    /* Adds space between the text and the switch */
-
-    /* --- Styling --- */
+    background: #fff;
     border: 1px solid #ccc;
-    /* A slightly softer border color */
     border-radius: 30px;
+    padding: 6px 14px;
+    gap: 10px;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: medium;
+    width: 14rem;
+    margin: auto;
+    height: 3rem;
+}
+
+#check-box .form-check-input {
+    order: 2;
+}
+
+#check-box .form-check-label {
+    order: 1;
+    margin: 0;
+}
+
+.navbar .form-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .form-control {
+    flex: 1;
+    min-width: 200px;
+}
+
+.navbar .btn {
+    white-space: nowrap;
+}
+
+#search-box {
+    border-radius: 25px !important;
+}
+
+#search-btn {
+    border-radius: 25px !important;
+    background-color: #fe424d;
+    color: #fff;
+    border: #ccc;
 }
